@@ -11,50 +11,78 @@
       href="./images/favicon-32x32.png"
     />
     <title>Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="wrapper">
         <main class="main">
-          <h1>spli <span>tter</span></h1>
-          <div>
-            <p>Bill</p>
+          <div class="title">
+            <img src="/images/logo.svg" alt="splitter" />
+          </div>
+          <div class="content">
             <div>
-              <label for="">
-                <input type="mumber" placeholder="0" />
-              </label>
-            </div>
-            <p>Select Tip %</p>
-            <div>
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
-              <label for="">
-                <input type="numer" placeholder="Custom" />
-              </label>
-            </div>
-            <div>
-              <p>Number of People</p>
+              <p class="content--text">Bill</p>
               <div>
-                <label for="">
-                  <input type="number" name="" id="" placeholder="0" />
+                <label for="billInput">
+                  <input
+                    type="number"
+                    placeholder="0"
+                    name="billInput"
+                    id="billInput"
+                    class="bill-input input-number"
+                  />
                 </label>
               </div>
+              <p class="content--text">Select Tip %</p>
+              <div class="buttons">
+                <button data-tip="5" class="tip-btn">5%</button>
+                <button data-tip="10" class="tip-btn">10%</button>
+                <button data-tip="15" class="tip-btn">15%</button>
+                <button data-tip="25" class="tip-btn">25%</button>
+                <button data-tip="50" class="tip-btn">50%</button>
+                <label for="">
+                  <input
+                    type="number"
+                    placeholder="Custom"
+                    name="customTip"
+                    id="customTip"
+                    class="custom-tip input-number"
+                  />
+                </label>
+              </div>
+              <div>
+                <p class="content--text">Number of People</p>
+                <div>
+                  <label for="peopleInput">
+                    <input
+                      type="number"
+                      name="people"
+                      id="peopleInput"
+                      class="people-input input-number"
+                      placeholder="0"
+                    />
+                  </label>
+                </div>
+              </div>
             </div>
-          </div>
-          <div>
-            <div>
-              <p>Tip Amount <span>/ person</span></p>
-              <p>$4.27</p>
+            <div class="total-div">
+              <div class="total-tip">
+                <p class="amount-person">Tip Amount <span>/ person</span></p>
+                <p class="tip-person">$0.00</p>
+              </div>
+              <div class="total-person">
+                <p class="amount-person">Total<span>/ person</span></p>
+                <p class="bill-person">$0.00</p>
+              </div>
+              <button type="button" class="reset-btn">Reset</button>
             </div>
-            <div>
-              <p>Total<span>/ person</span></p>
-              <p>$32.79</p>
-            </div>
-            <button>Reset</button>
           </div>
         </main>
       </div>
@@ -64,5 +92,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+    <script src="index.js"></script>
   </body>
 </html>
