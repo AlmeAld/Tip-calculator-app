@@ -159,3 +159,37 @@ button {
   font-size: 1.5rem;
   margin-top: 0.5rem;
 }
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    max-width: 56rem;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .content > div {
+    flex: 1;
+  }
+
+  .total-div {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .reset-btn {
+    margin-top: auto;
+  }
+}
