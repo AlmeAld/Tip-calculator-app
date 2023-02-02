@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background: var(--ligth-grayish-cyan);
   font-family: "Space Mono", monospace;
@@ -56,6 +57,7 @@ body {
 .content--text {
   color: var(--dark-grayish-cyan);
   margin-top: 1rem;
+  font-size: 1rem;
 }
 
 button {
@@ -187,6 +189,10 @@ button {
     display: flex;
     flex-direction: column;
     padding: 2.5rem 1.5rem;
+  }
+
+  .tip-person, .bill-person{
+    font-size: 3rem;
   }
 
   .reset-btn {

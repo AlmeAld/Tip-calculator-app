@@ -5,22 +5,10 @@ const peopleInput = document.querySelector(".people-input");
 const billPerson = document.querySelector(".bill-person");
 const tipPerson = document.querySelector(".tip-person");
 
-
-// const allInput = document.querySelectorAll("input");
-// allInput.forEach(input => {
-//   input.addEventListener("focus", (event) => {
-//     event.target.style.background = "yellow";
-//     event.target.style.outline = "blue";
-//     console.log(event.target.style.borderColor);
-//   });
-// });
-
-
 //variables globales
 let billValue = 0;
 let tipValue = 0;
 let peopleValue = 0;
-// let tipInputValue = 0;
 
 const handleBillInput = (e) => {
   billValue = parseFloat(e.target.value);
@@ -32,13 +20,15 @@ const handlePeopleInput = (e) => {
   calculate();
 };
 
-// const handlePeopleInput = () => {
-//   peopleValue = parseFloat(peopleInput.value);
-  // calculate();
-// };
+const handleTipInput = (e) => {
+  btnTips.forEach((btn) => btn.classList.remove("active"));
+  tipValue = parseFloat(e.target.value / 100);
+  calculate();
+};
 
 billInput.addEventListener("input", handleBillInput);
 peopleInput.addEventListener("input", handlePeopleInput);
+tipInput.addEventListener("input", handleTipInput);
 
 // obtener el valor de tip de cada boton y convertirlo a decimal (/100)
 btnTips.forEach((btnTip) => {
